@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/platFragment">
+
+    <fragment
+        android:id="@+id/begudaFragment"
+        android:name="com.faixeda.appmenu.BegudaFragment"
+        android:label="fragment_beguda"
+        tools:layout="@layout/fragment_beguda" >
+        <action
+            android:id="@+id/action_begudaFragment_to_pagarFragment"
+            app:destination="@id/pagarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagarFragment"
+        android:name="com.faixeda.appmenu.PagarFragment"
+        android:label="fragment_pagar"
+        tools:layout="@layout/fragment_pagar" />
+    <fragment
+        android:id="@+id/platFragment"
+        android:name="com.faixeda.appmenu.PlatFragment"
+        android:label="fragment_plat"
+        tools:layout="@layout/fragment_plat" >
+        <action
+            android:id="@+id/action_platFragment_to_begudaFragment"
+            app:destination="@id/begudaFragment" />
+    </fragment>
+</navigation>
